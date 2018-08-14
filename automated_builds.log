@@ -812,3 +812,73 @@ b40ee2e062c4: Preparing
 3950338e1e6a: Layer already exists
 b40ee2e062c4: Pushed
 core-0.0.1: digest: sha256:4584869fd35a3ce6f86cde7176346211d630bc97b7c3132d16740720bc3180ec size: 951
+
+BUILD 1534252154 (Tue Aug 14 21:09:14 HKT 2018)
+
+> Running "installDist" in tgm-main-core...
+:clean
+
+BUILD SUCCESSFUL in 1s
+1 actionable task: 1 executed
+:compileJava
+Download https://jitpack.io/com/github/tg-monitor/tgm-ipc-core/master-SNAPSHOT/maven-metadata.xml
+Download https://jitpack.io/com/github/tg-monitor/tgm-corefacade/master-SNAPSHOT/maven-metadata.xml
+Download https://jitpack.io/com/github/tg-monitor/tgm-corefacade/master-SNAPSHOT/tgm-corefacade-master-0.0.1-gea9f79c-9.pom
+Download https://jitpack.io/com/github/tg-monitor/tgm-backend/master-SNAPSHOT/maven-metadata.xml
+Download https://jitpack.io/com/github/tg-monitor/tgm-telegram/master-SNAPSHOT/maven-metadata.xml
+Download https://jitpack.io/com/github/tg-monitor/tgm-notification/master-SNAPSHOT/maven-metadata.xml
+Download https://jitpack.io/com/github/tg-monitor/tgm-monitor/master-SNAPSHOT/maven-metadata.xml
+Download https://jitpack.io/com/github/tg-monitor/tgm-matching/master-SNAPSHOT/maven-metadata.xml
+Download https://jitpack.io/com/github/tg-monitor/tgm-servicelocator-instances/master-SNAPSHOT/maven-metadata.xml
+Download https://jitpack.io/com/github/tg-monitor/tgm-ipc-api/master-SNAPSHOT/maven-metadata.xml
+:processResources
+:classes
+:jar
+:startScripts
+:installDist
+
+BUILD SUCCESSFUL in 41s
+5 actionable tasks: 5 executed
+
+> Components in tgm-main-core:
+tgm-backend                   master-SNAPSHOT
+tgm-corefacade                master-SNAPSHOT
+tgm-entities                  0.0.2
+tgm-ipc-api                   master-SNAPSHOT
+tgm-ipc-core                  master-SNAPSHOT
+tgm-logincodeprompt           0.0.1
+tgm-main-core                 0.0.1
+tgm-matching                  master-SNAPSHOT
+tgm-monitor                   master-SNAPSHOT
+tgm-notification              master-SNAPSHOT
+tgm-servicelocator            0.0.1
+tgm-servicelocator-instances  master-SNAPSHOT
+tgm-telegram                  master-SNAPSHOT
+
+> Copying tgm-main-core/build/install/tgm-main-core to bundle-core...
+
+> Building Docker image weibeld/tg-monitor:core-0.0.1 in bundle-core...
+Sending build context to Docker daemon  6.715MB
+Step 1/4 : FROM weibeld/tg-monitor:base
+ ---> e0c521fc96cf
+Step 2/4 : WORKDIR /root
+ ---> Using cache
+ ---> 7c103313f890
+Step 3/4 : COPY tgm-main-core .
+ ---> 44083a1f2ba1
+Step 4/4 : CMD ./bin/tgm-main-core
+ ---> Running in 09727d561263
+Removing intermediate container 09727d561263
+ ---> 949c4c63c00a
+Successfully built 949c4c63c00a
+Successfully tagged weibeld/tg-monitor:core-0.0.1
+
+> Pushing Docker image weibeld/tg-monitor:core-0.0.1 to Docker Hub...
+The push refers to repository [docker.io/weibeld/tg-monitor]
+2a137bc6fbdd: Preparing
+3950338e1e6a: Preparing
+73046094a9b8: Preparing
+3950338e1e6a: Layer already exists
+2a137bc6fbdd: Pushed
+73046094a9b8: Pushed
+core-0.0.1: digest: sha256:1555e57e2c58f9a82b5f1a778f6941a5c9148e3ce62cda9aca614de9ab601b06 size: 951
